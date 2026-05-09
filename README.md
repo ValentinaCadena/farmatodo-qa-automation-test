@@ -6,11 +6,11 @@
 
 ## 🚀 Stack Tecnológico
 
-**Playwright** • **TypeScript** • **Node.js** • **POM Pattern**
+**Playwright** • **TypeScript** • **Node.js** • **POM Pattern** • **CI/CD**
 
 ---
 
-## � Instalación Rápida
+## 📦 Instalación Rápida
 
 ```bash
 # 1. Clonar repositorio
@@ -110,6 +110,7 @@ tests/
 ✅ Validaciones **exhaustivas** de datos  
 ✅ Usuarios **aleatorios** para mayor cobertura
 ✅ Reportes **HTML** detallados  
+✅ Integración Continua **(CI/CD)**
 
 ---
 
@@ -148,7 +149,23 @@ use: {
 
 ---
 
-## 👨‍� Desarrollado para
+## 🔄 Integración Continua (CI/CD)
+El proyecto utiliza GitHub Actions para la ejecución automática de pruebas.
+Características del pipeline:
+
+Se ejecuta en cada push y pull request.
+
+Instala dependencias y navegadores Playwright automáticamente.
+
+Ejecuta todas las pruebas en modo headless.
+
+Genera y guarda el reporte HTML como artefacto de la ejecución.
+
+📄 Workflow: .github/workflows/playwright.yml
+
+---
+
+##  👨‍💻 Desarrollado para
 
 **Farmatodo S.A.S.** - Prueba Técnica QA Automation Engineer
 
