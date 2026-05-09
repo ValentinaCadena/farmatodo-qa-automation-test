@@ -25,17 +25,14 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
 
-    headless: false,
-    
-    // slowMo se configura en launchOptions dentro de cada proyecto
+    // En CI corre en headless, en local es visual
+    headless: !!process.env.CI,
+
+    // slowMo solo para ejecución local
     launchOptions: {
-      slowMo: 300,
+      slowMo: process.env.CI ? 0 : 300,
     },
   },
 
